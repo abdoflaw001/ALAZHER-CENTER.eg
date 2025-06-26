@@ -1,39 +1,28 @@
-/**
- * This code creates a simple single-page application (SPA) structure.
- * Each "page" is a section shown/hidden by clicking its corresponding button.
- */
+// دالة لإظهار القسم المطلوب وإخفاء الباقي
+function showSection(id) {
+    const sections = document.querySelectorAll('.section-content');
 
-const pages = [
-    { id: 'home', label: 'Home', content: '<h2>Home Page</h2><p>Welcome to the Home page!</p>' },
-    { id: 'about', label: 'About', content: '<h2>About Page</h2><p>This is the About page.</p>' },
-    { id: 'contact', label: 'Contact', content: '<h2>Contact Page</h2><p>Contact us here.</p>' }
-];
-
-// Create navigation buttons
-const nav = document.createElement('nav');
-pages.forEach(page => {
-    const btn = document.createElement('button');
-    btn.textContent = page.label;
-    btn.onclick = () => showPage(page.id);
-    nav.appendChild(btn);
-});
-document.body.appendChild(nav);
-
-// Create page containers
-pages.forEach(page => {
-    const div = document.createElement('div');
-    div.id = page.id;
-    div.innerHTML = page.content;
-    div.style.display = 'none';
-    document.body.appendChild(div);
-});
-
-// Show selected page and hide others
-function showPage(pageId) {
-    pages.forEach(page => {
-        document.getElementById(page.id).style.display = (page.id === pageId) ? 'block' : 'none';
+    // إخفاء كل الأقسام وإزالة الأنيميشن
+    sections.forEach(section => {
+        section.style.display = 'none';
+        section.classList.remove('fade-in');
     });
+
+    // عرض القسم المطلوب وتطبيق الأنيميشن
+    const activeSection = document.getElementById(id);
+    if (activeSection) {
+        activeSection.style.display = 'block';
+        setTimeout(() => {
+            activeSection.classList.add('fade-in');
+        }, 10);
+
+        // حفظ القسم الحالي في localStorage
+        localStorage.setItem('currentSection', id);
+    }
 }
 
-// Show the first page by default
-showPage(pages[0].id);
+// عند تحميل الصفحة، يتم عرض آخر قسم تم زيارته أو القسم "home" افتراضياً
+window.onload = () => {
+    const lastSection = localStorage.getItem('currentSection') || 'home';
+    showSection(lastSection);
+};
