@@ -1,95 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
-        <title>Prg.Eng.Abdo Flaw</title>
-    </head>
-    <body>
-        <h1 id="home" class="home">
-            <header>
-                <a href="#" class="logo">
-                    <img src="assets/imgs/Prg.Eng.Abdo Flaw.png" alt="Abdullahe programmer Engineer logo" class="logo-img">
-                </a>
-                <nav class="navigation">
-                    <ul>
-                        <li><a href="#home" class="home">Home</a></li>
-                        <li><a href="#aboutme" class="aboutme">About Me</a></li>
-                        <li><a href="#skills" class="skills">My Skills</a></li>
-                        <li><a href="#works" class="works">My Works</a></li>
-                        <li><a href="#contact" class="contact">Contact Me</a></li>
-                    </ul>
-                </nav>
-                <hr>
-            </header>   
-                <nav class="navigation">
-                    <ul>
-                        <li><a href="#skills">My Skills</a></li>
-                        <li><a href="#works">My Works</a></li>
-                    </ul>
-                </nav>
-            <section id="aboutme" class="aboutme">
-                <h1 class="title">About Me</h1>
-                <h1 class="welcome-message">
-                    Welcome to My website!
-                    Hello,
-                    I'm programmer Engineer Abdullahe Flaw
-                    you can find my projects and skills here
-                </h1>
-            </section>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Prg.Eng.Abdo Flaw</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="assets/imgs/Prg.Eng.Abdo Flaw.png" alt="Abdullahe programmer Engineer logo" class="logo-img">
+        </a>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('aboutme')">About Me</a></li>
+                <li><a href="#" onclick="showSection('skills')">My Skills</a></li>
+                <li><a href="#" onclick="showSection('works')">My Works</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact Me</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <section id="home" class="home section-content">
+        <h1 class="title">Welcome Home</h1>
+    </section>
+
+    <section id="aboutme" class="aboutme section-content">
+        <h1 class="title">About Me</h1>
+        <h1 class="welcome-message">
+            Welcome to My website! Hello, I'm programmer Engineer Abdullahe Flaw.
+            You can find my projects and skills here.
         </h1>
-        </section>
-        <section id="skills" class="skills">
-            <h1 class="title">My Skills</h1>
-            <ul>
-                <li><h3>HTML</h3></li>
-                <li><h3>CSS</h3></li>
-                <li><h3>JavaScript</h3></li>
-                <li><h3>React</h3></li>
-                <li><h3>Node.js</h3></li>
-                <li><h3>Bootstrap</h3></li>
-                <li><h3>Python</h3></li>
-                <li><h3>Java</h3></li>
-                <li><h3>C++</h3></li>
-                <li><h3>C#</h3></li>
-                <li><h3>PHP</h3></li>
-                <h3>SQL</h3>
-            </ul>
-        </section>
-        </section>
-        <section id="works" class="works">
-            <h1 class="title">My Works</h1>
-            <ul>
-                <li><a href="https://abdoflaw001.github.io/ALAZHER-CENTER/" target="_blank">
-                    <img src="assets/imgs/app.png"  />
-                </a></li>
-                    <li><a href="https://abdoflaw001.github.io/ALAZHER-CENTER/" target="_blank">
-                    <img src="assets/imgs/landingPage.png" />
-                </a></li>
-                    <li><a href="https://abdoflaw001.github.io/ALAZHER-CENTER/" target="_blank">
-                    <img src="assets/imgs/webApp.png" />
-                </a></li>
-            </ul>
-        </section>
-        <section id="contact" class="contact">
-            <h1 class="title">Contact Me</h1>
-            <h1>If you have any questions or want to get in touch, feel free to reach out!</h1>
-            <ul>
-                <li><a href="https://github.com/abdoflaw001" target="_blank"><img src="assets/svg/GitHub.svg" alt="GitHub Icon" target="_blank" />GitHub</a></li>
-                <li><a href="mailto:abdoflaw01@gmail.com" target="_blank"><img src="assets/svg/Email.svg" target="_blank" alt="Email Icon" />Email</a><a href="mailto:abdoflaw01@gmail.com" target="_blank" class="email">abdoflaw01@gmail.com</a></li>
-                <li><a href="#" target="_blank"><img src="assets/svg/phone.svg" target="_blank" alt="Phone Icon" />Phone</a><a href="#" target="_blank" class="email">+20 1004873824</a></li>
-            </ul>
-        </section>
-        <footer id="footer" class="footer">
-            <hr>
-            <h1 class="title">Thank you for visiting my website!</h1>
-            <h1>This website is created by Prg.Eng.Abdullahe Flaw</h1>
-            <h1 class="title">&copy; Prg.Eng.Abdullahe Flaw 2025.</h1>
-            <h1>Follow me on social media!</h1>
-            </ul>
-        </footer>
-    </body>
+    </section>
+
+    <section id="skills" class="skills section-content">
+        <h1 class="title">My Skills</h1>
+        <ul>
+            <li><h3>HTML</h3></li>
+            <li><h3>CSS</h3></li>
+            <li><h3>JavaScript</h3></li>
+            <li><h3>React</h3></li>
+            <li><h3>Node.js</h3></li>
+            <li><h3>Bootstrap</h3></li>
+            <li><h3>Python</h3></li>
+            <li><h3>Java</h3></li>
+            <li><h3>C++</h3></li>
+            <li><h3>C#</h3></li>
+            <li><h3>PHP</h3></li>
+            <li><h3>SQL</h3></li>
+        </ul>
+    </section>
+
+    <section id="works" class="works section-content">
+        <h1 class="title">My Works</h1>
+        <ul>
+            <li>
+                <a href="https://abdoflaw001.github.io/ALAZHER-CENTER/" target="_blank">
+                    <img src="assets/imgs/app.png" alt="App Project" />
+                </a>
+            </li>
+            <li>
+                <a href="https://abdoflaw001.github.io/ALAZHER-CENTER/" target="_blank">
+                    <img src="assets/imgs/landingPage.png" alt="Landing Page Project" />
+                </a>
+            </li>
+            <li>
+                <a href="https://abdoflaw001.github.io/ALAZHER-CENTER/" target="_blank">
+                    <img src="assets/imgs/webApp.png" alt="Web App Project" />
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact section-content">
+        <h1 class="title">Contact Me</h1>
+        <ul>
+            <li><a href="https://github.com/abdoflaw001" target="_blank">GitHub</a></li>
+            <li><a href="mailto:abdoflaw01@gmail.com" target="_blank">Email</a></li>
+            <li><a href="#" target="_blank">Phone</a></li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <hr>
+        <h1 class="title">Thank you for visiting my website!</h1>
+        <h1>This website is created by Prg.Eng.Abdullahe Flaw</h1>
+        <h1 class="title">&copy; Prg.Eng.Abdullahe Flaw 2025.</h1>
+        <h1>Follow me on social media!</h1>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
